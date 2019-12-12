@@ -20,140 +20,166 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Employee First Name"
-        android:textSize="15dp"
+        android:textSize="18dp"
+        android:layout_below="@+id/RegistrationPage"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="20dp"/>
     <TextView
         android:id="@+id/lastname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Employee Last Name"
-        android:textSize="15dp"
+        android:textSize="18dp"
+        android:layout_below="@+id/firstname"
         android:layout_marginLeft="20dp"
-       android:layout_marginTop="140dp"/>
+       android:layout_marginTop="20dp"/>
     <TextView
         android:id="@+id/BirthYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Employee Birth Year"
-        android:textSize="15dp"
+        android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="180dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/lastname"/>
 
     <TextView
         android:id="@+id/MonthlySalary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Monthly Salary"
-        android:textSize="15dp"
+        android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="220dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/BirthYear"/>
     <TextView
         android:id="@+id/OccupationRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Occupation Rate"
-        android:textSize="15dp"
+        android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="260dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/MonthlySalary"/>
 
     <TextView
         android:id="@+id/employeeId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Employee ID"
-        android:textSize="15dp"
+        android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="300dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/OccupationRate"/>
     <TextView
         android:id="@+id/EmployeeType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Employee Type"
-        android:textSize="15dp"
+        android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="340dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/employeeId"/>
     <TextView
         android:id="@+id/Vehicle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Vehicle"
-        android:textSize="15dp"
+        android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="380dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/EmployeeType"/>
     <TextView
         android:id="@+id/VehicleModel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Vehicle Model"
-        android:textSize="15dp"
+        android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="420dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/Vehicle"/>
     <TextView
         android:id="@+id/PlateNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Plate Number"
-        android:textSize="15dp"
+        android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="460dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/VehicleModel"/>
     <TextView
         android:id="@+id/VehicleColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Vehicle Color"
-        android:textSize="15dp"
+        android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="500dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/PlateNumber"/>
 
     <EditText
         android:id="@+id/EditFirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="190dp"
-        android:layout_marginTop="100dp"
+        android:layout_below="@+id/RegistrationPage"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/firstname"
         android:background="#ddd"
-        android:hint="first name" />
+        android:hint="  first name"
+        android:textSize="18dp" />
 
     <EditText
         android:id="@+id/editLastName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="190dp"
-        android:layout_marginTop="140dp"
+        android:layout_below="@+id/EditFirstName"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/firstname"
         android:background="#ddd"
-        android:hint="last name" />
+        android:hint="  last name"
+        android:textSize="18dp" />
 
     <EditText
         android:id="@+id/birthyear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="190dp"
-        android:layout_marginTop="180dp"
+        android:layout_below="@+id/editLastName"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/BirthYear"
         android:background="#ddd"
-        android:hint="birth year" />
+        android:hint="  birth year"
+        android:textSize="18dp" />
 
     <EditText
         android:id="@+id/monthlysalary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="190dp"
-        android:layout_marginTop="220dp"
+        android:layout_below="@+id/birthyear"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/BirthYear"
         android:background="#ddd"
-        android:hint="monthly salary" />
+        android:hint="  monthly salary"
+        android:textSize="18dp" />
 
     <EditText
         android:id="@+id/occupationrate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="190dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/MonthlySalary"
+        android:layout_below="@+id/monthlysalary"
         android:background="#ddd"
+        android:textSize="18dp"
         android:hint="occupation rate" />
 
     <EditText
@@ -165,6 +191,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="80dp"
+        android:textSize="18dp"
         android:background="#ddd"
         android:hint="employee id" />
 
@@ -172,23 +199,27 @@
         android:id="@+id/model"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="190dp"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="20dp"
-        android:layout_below="@id/EmployeeType"
+        android:layout_below="@id/Vehicle"
         android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/VehicleModel"
         android:background="#ddd"
+        android:textSize="18dp"
         android:hint="Model" />
 
     <EditText
         android:id="@+id/plateno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="190dp"
+        android:layout_marginLeft="70dp"
         android:layout_below="@+id/VehicleModel"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/PlateNumber"
         android:background="#ddd"
-        android:hint="plate number" />
+        android:hint="plate number"
+        android:textSize="18dp"/>
 
 
 
