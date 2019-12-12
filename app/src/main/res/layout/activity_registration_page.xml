@@ -195,6 +195,17 @@
         android:background="#ddd"
         android:hint="employee id" />
 
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Semploye_type"
+        android:layout_toRightOf="@id/EmployeeType"
+        android:layout_below="@id/employeeid"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:entries="@array/Emp_type"/>
+
+
     <EditText
         android:id="@+id/model"
         android:layout_width="match_parent"
@@ -220,6 +231,16 @@
         android:background="#ddd"
         android:hint="plate number"
         android:textSize="18dp"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SVehicle_color"
+        android:entries="@array/Veh_color"
+        android:layout_toRightOf="@+id/VehicleColor"
+        android:layout_below="@+id/plateno"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="60dp"/>
+
 
 
 

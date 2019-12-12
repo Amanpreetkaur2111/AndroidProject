@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">AndroidProject</string>
+    <string-array name="Emp_type">
+        <item>Choose a type</item>
+        <item>Manager</item>
+        <item>Tester</item>
+        <item>Programmer</item>
+    </string-array>
+
+    <string-array name="Veh_color">
+        <item>Choose a Color</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Orange</item>
+        <item>Purple</item>
+        <item>Pink</item>
+        <item>Brown</item>
+        <item>White</item>
+        <item>Black</item>
+        <item>Beige</item>
+    </string-array>
 </resources>
