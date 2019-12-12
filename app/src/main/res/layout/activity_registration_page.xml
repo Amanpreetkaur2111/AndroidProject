@@ -1,9 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegistrationPage">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/RegistrationPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registration Form"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee First Name"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"/>
+    <TextView
+        android:id="@+id/lastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee Last Name"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+       android:layout_marginTop="140dp"/>
+    <TextView
+        android:id="@+id/BirthYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee Birth Year"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="180dp"/>
+
+    <TextView
+        android:id="@+id/MonthlySalary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monthly Salary"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="220dp"/>
+    <TextView
+        android:id="@+id/OccupationRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Occupation Rate"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="260dp"/>
+
+    <TextView
+        android:id="@+id/employeeId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee ID"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="300dp"/>
+    <TextView
+        android:id="@+id/EmployeeType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee Type"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="340dp"/>
+    <TextView
+        android:id="@+id/Vehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vehicle"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="380dp"/>
+    <TextView
+        android:id="@+id/VehicleModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vehicle Model"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="420dp"/>
+    <TextView
+        android:id="@+id/PlateNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plate Number"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="460dp"/>
+    <TextView
+        android:id="@+id/VehicleColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vehicle Color"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="500dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
