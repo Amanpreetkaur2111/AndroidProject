@@ -156,6 +156,41 @@
         android:background="#ddd"
         android:hint="occupation rate" />
 
+    <EditText
+        android:id="@+id/employeeid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/employeeId"
+        android:layout_below="@+id/OccupationRate"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="80dp"
+        android:background="#ddd"
+        android:hint="employee id" />
+
+    <EditText
+        android:id="@+id/model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/EmployeeType"
+        android:layout_marginRight="20dp"
+        android:background="#ddd"
+        android:hint="Model" />
+
+    <EditText
+        android:id="@+id/plateno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="190dp"
+        android:layout_below="@+id/VehicleModel"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#ddd"
+        android:hint="plate number" />
+
+
 
 
 
