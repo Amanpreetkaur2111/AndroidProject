@@ -106,13 +106,55 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="500dp"/>
 
+    <EditText
+        android:id="@+id/EditFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:background="#ddd"
+        android:hint="first name" />
 
+    <EditText
+        android:id="@+id/editLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="20dp"
+        android:background="#ddd"
+        android:hint="last name" />
 
+    <EditText
+        android:id="@+id/birthyear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginRight="20dp"
+        android:background="#ddd"
+        android:hint="birth year" />
 
+    <EditText
+        android:id="@+id/monthlysalary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginRight="20dp"
+        android:background="#ddd"
+        android:hint="monthly salary" />
 
-
-
-
+    <EditText
+        android:id="@+id/occupationrate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginRight="20dp"
+        android:background="#ddd"
+        android:hint="occupation rate" />
 
 
 
