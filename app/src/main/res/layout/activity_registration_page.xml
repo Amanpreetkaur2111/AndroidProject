@@ -241,6 +241,15 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="60dp"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/btn"
+        android:layout_below="@+id/SVehicle_color"
+        android:layout_marginTop="20dp"/>
+
+
 
 
 
