@@ -80,6 +80,9 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/employeeId"/>
+
+
+
     <TextView
         android:id="@+id/Vehicle"
         android:layout_width="wrap_content"
@@ -90,6 +93,18 @@
         android:layout_marginTop="20dp"
         android:layout_below="@+id/EmployeeType"/>
     <TextView
+        android:id="@+id/Cartype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Car Type"
+        android:textSize="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/Vehicle"/>
+
+
+
+    <TextView
         android:id="@+id/VehicleModel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -97,7 +112,7 @@
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/Vehicle"/>
+        android:layout_below="@+id/Cartype"/>
     <TextView
         android:id="@+id/PlateNumber"
         android:layout_width="wrap_content"
@@ -205,6 +220,7 @@
         android:layout_marginTop="20dp"
         android:entries="@array/Emp_type"/>
 
+
     <RadioGroup
         android:id="@+id/RGroup"
         android:layout_width="wrap_content"
@@ -227,6 +243,30 @@
             android:text="Motorbike"/>
 
     </RadioGroup>
+    <RadioGroup
+        android:id="@+id/RsideGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/RGroup"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:layout_toRightOf="@id/Vehicle">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Rby1"
+            android:text="Yes"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Rbn2"
+            android:text="No"/>
+
+    </RadioGroup>
+
 
     <EditText
         android:id="@+id/model"
@@ -234,7 +274,32 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="70dp"
         android:layout_marginTop="20dp"
-        android:layout_below="@id/Vehicle"
+        android:layout_below="@id/RsideGroup"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/VehicleModel"
+        android:background="#ddd"
+        android:textSize="18dp"
+        android:hint="Model" />
+    <EditText
+        android:id="@+id/EditCarType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/RGroup"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/SideCar"
+        android:background="#ddd"
+        android:textSize="18dp"
+        android:hint="Car Type" />
+
+    <EditText
+        android:id="@+id/vehiclemodel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/EditCarType"
         android:layout_marginRight="20dp"
         android:layout_toRightOf="@+id/VehicleModel"
         android:background="#ddd"
@@ -270,6 +335,21 @@
         android:id="@+id/btn"
         android:layout_below="@+id/SVehicle_color"
         android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/SideCar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Side Car"
+        android:visibility="gone"
+        android:textSize="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/Vehicle"/>
+
+
+
+
 
 
 
