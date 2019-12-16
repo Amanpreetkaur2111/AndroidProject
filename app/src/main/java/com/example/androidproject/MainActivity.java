@@ -38,11 +38,20 @@ public class MainActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
 
 
+        listView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,RegistrationPage.class);
                 startActivity(intent);
+
 
             }
         });
