@@ -19,9 +19,9 @@ public class RegistrationPage extends AppCompatActivity {
 
 
 
-    TextView Fname,Lname,Byear,Msalary,Orate,Eid,Etype,Veh,Vmodel,Pnumber,Vcolor,Car_type,Side_Car,tester_bugs,program_projects,manager_clients;
+    TextView Fname,Lname,Byear,Msalary,Orate,Eid,Etype,Veh,Vmodel,Pnumber,Vcolor,Car_type,Side_Car,Work_done;
 
-    EditText editfname,editlname,byear,msalary,orate,eid,carmodel,Vehicle_model,plate,Ecar_type,EditT_numbers,EditP_numbers,EditM_numbers;
+    EditText editfname,editlname,byear,msalary,orate,eid,Vehicle_model,plate,Ecar_type,Numbers;
 
     Spinner Semptype,Svehcolor;
 
@@ -48,9 +48,9 @@ public class RegistrationPage extends AppCompatActivity {
     Vcolor = findViewById(R.id.VehicleColor);
     Car_type = findViewById(R.id.Cartype);
     Side_Car = findViewById(R.id.SideCar);
-    tester_bugs = findViewById(R.id.T_bugs);
-    program_projects = findViewById(R.id.P_projects);
-    manager_clients = findViewById(R.id.M_clients);
+
+
+    Work_done = findViewById(R.id.work);
 
 
 
@@ -62,8 +62,8 @@ public class RegistrationPage extends AppCompatActivity {
     msalary = findViewById(R.id.monthlysalary);
     orate = findViewById(R.id.occupationrate);
     eid = findViewById(R.id.employeeid);
-    carmodel = findViewById(R.id.model);
-    Vehicle_model = findViewById(R.id.vehiclemodel);
+    //Vehicle_model = findViewById(R.id.);
+    Vehicle_model = findViewById(R.id.model);
     plate = findViewById(R.id.plateno);
     Numbers = findViewById(R.id.numbers);
 
@@ -85,52 +85,60 @@ public class RegistrationPage extends AppCompatActivity {
 
          switch(i){
              case 1:
-                 manager_clients.setVisibility(View.VISIBLE);
-                 program_projects.setVisibility(View.GONE);
-                 tester_bugs.setVisibility(View.GONE);
+                 Work_done.setVisibility(View.VISIBLE);
+                 Work_done.setText("# clients");
+                 //program_projects.setVisibility(View.GONE);
+                 //tester_bugs.setVisibility(View.GONE);
                  Numbers.setVisibility(View.VISIBLE);
 
 
                  break;
              case 2:
-                 tester_bugs.setVisibility(View.VISIBLE);
-                 manager_clients.setVisibility(View.GONE);
-                 program_projects.setVisibility(View.GONE);
+                 //tester_bugs.setVisibility(View.VISIBLE);
+                 Work_done.setVisibility(View.VISIBLE);
+                 Work_done.setText("# bugs");
+                 //program_projects.setVisibility(View.GONE);
                  Numbers.setVisibility(View.VISIBLE);
                  break;
              case 3:
-                 program_projects.setVisibility(View.VISIBLE);
-                 tester_bugs.setVisibility(View.GONE);
-                 manager_clients.setVisibility(View.GONE);
+                 //program_projects.setVisibility(View.VISIBLE);
+                 //tester_bugs.setVisibility(View.GONE);
+                 Work_done.setVisibility(View.VISIBLE);
+                 Work_done.setText("# projects");
                  Numbers.setVisibility(View.VISIBLE);
                  break;
               default:
                   Numbers.setVisibility(View.GONE);
-                  manager_clients.setVisibility(View.GONE);
-                  tester_bugs.setVisibility(View.GONE);
-                  program_projects.setVisibility(View.GONE);
+                  Work_done.setVisibility(View.GONE);
+                  //tester_bugs.setVisibility(View.GONE);
+                  //program_projects.setVisibility(View.GONE);
          }
 
             rgroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                    RadioButton r_Button = (RadioButton)findViewById(i);
-                    value = r_Button.getText().toString();
+//                    RadioButton r_Button = (RadioButton)findViewById(i);
+//                    value = r_Button.getText().toString();
+
+
 
                     if(i == R.id.Rb1){
                         Car_type.setVisibility(View.VISIBLE);
                         Ecar_type.setVisibility(View.VISIBLE);
-                        Side_Car.setVisibility(View.GONE);
-                        rsidegroup.setVisibility(View.GONE);
+                        Side_Car.setVisibility(View.INVISIBLE);
+                        rsidegroup.setVisibility(View.INVISIBLE);
                     }
-                    else
+
+                    else if(i == R.id.Rb2)
                     {
-                        Car_type.setVisibility(View.GONE);
-                        Ecar_type.setVisibility(View.GONE);
+                        Car_type.setVisibility(View.INVISIBLE);
+                        Ecar_type.setVisibility(View.INVISIBLE);
                         Side_Car.setVisibility(View.VISIBLE);
                         rsidegroup.setVisibility(View.VISIBLE);
                     }
+
+
                 }
             });
         }
@@ -148,17 +156,17 @@ public class RegistrationPage extends AppCompatActivity {
          @Override
          public void onClick(View view) {
 
-             if(!editfname.getText().toString().isEmpty() & !editlname.getText().toString().isEmpty() & byear.getText().toString().isEmpty() & !
-                msalary.getText().toString().isEmpty() & orate.getText().toString().isEmpty() & eid.getText().toString().isEmpty() &
-                     !Semptype.getSelectedItem().toString().isEmpty() & !Numbers.getText().toString().isEmpty() & !carmodel.getText().toString().isEmpty() &
-                     !Vehicle_model.getText().toString().isEmpty() & !plate.getText().toString().isEmpty() & !Svehcolor.getSelectedItem().toString().isEmpty()){
+             if(!editfname.getText().toString().isEmpty() && !editlname.getText().toString().isEmpty() && !byear.getText().toString().isEmpty() &&
+                !msalary.getText().toString().isEmpty() && !orate.getText().toString().isEmpty() && !eid.getText().toString().isEmpty()
+                      && !Numbers.getText().toString().isEmpty() && !Vehicle_model.getText().toString().isEmpty() &&
+                     !Vehicle_model.getText().toString().isEmpty() && !plate.getText().toString().isEmpty() ){
 
                  int id = rgroup.getCheckedRadioButtonId();
 
                  switch (id){
 
                      case R.id.Rb1:
-                         E_v = new car(Vehicle_model.getText().toString(), plate.getText().toString(), Svehcolor.getSelectedItem().toString(), carmodel.getText().toString());
+                         E_v = new car(Vehicle_model.getText().toString(), plate.getText().toString(), Svehcolor.getSelectedItem().toString(), Vehicle_model.getText().toString());
                          break;
 
                      case R.id.Rb2:
@@ -189,30 +197,30 @@ public class RegistrationPage extends AppCompatActivity {
                          if(!Orate.getText().toString().equals("")){
                              emp = new manager(editfname.getText().toString() + "" + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
                                      Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), Double.parseDouble(orate.getText().toString()),
-                                     E_v, Integer.parseInt(numbers.getText().toString()));}
+                                     E_v, Integer.parseInt(Numbers.getText().toString()));}
                          else {
                              emp = new manager(editfname.getText().toString() + " " + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
-                                     Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), E_v, Integer.parseInt(numbers.getText().toString()));
+                                     Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), E_v, Integer.parseInt(Numbers.getText().toString()));
                          }
                          break;
                      case "Tester":
                          if(!Orate.getText().toString().equals("")){
                              emp = new manager(editfname.getText().toString() + "" + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
                                      Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), Double.parseDouble(orate.getText().toString()),
-                                     E_v, Integer.parseInt(numbers.getText().toString()));}
+                                     E_v, Integer.parseInt(Numbers.getText().toString()));}
                          else {
                              emp = new manager(editfname.getText().toString() + " " + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
-                                     Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), E_v, Integer.parseInt(numbers.getText().toString()));
+                                     Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), E_v, Integer.parseInt(Numbers.getText().toString()));
                          }
                          break;
                      case "Programmer":
                      if(!Orate.getText().toString().equals("")){
                          emp = new manager(editfname.getText().toString() + "" + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
                                  Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), Double.parseDouble(orate.getText().toString()),
-                                 E_v, Integer.parseInt(numbers.getText().toString()));}
+                                 E_v, Integer.parseInt(Numbers.getText().toString()));}
                      else {
                          emp = new manager(editfname.getText().toString() + " " + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
-                                 Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), E_v, Integer.parseInt(numbers.getText().toString()));
+                                 Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), E_v, Integer.parseInt(Numbers.getText().toString()));
                      }
                      break;
                  }
