@@ -18,7 +18,7 @@ public class RegistrationPage extends AppCompatActivity {
 
     TextView Fname,Lname,Byear,Msalary,Orate,Eid,Etype,Veh,Vmodel,Pnumber,Vcolor,Car_type,Side_Car,tester_bugs,program_projects,manager_clients;
 
-    EditText editfname,editlname,byear,msalary,orate,eid,carmodel,plate,Ecar_type,Numbers;
+    EditText editfname,editlname,byear,msalary,orate,eid,carmodel,Vehicle_model,plate,Ecar_type,Numbers;
 
     Spinner Semptype,Svehcolor;
 
@@ -60,6 +60,7 @@ public class RegistrationPage extends AppCompatActivity {
     orate = findViewById(R.id.occupationrate);
     eid = findViewById(R.id.employeeid);
     carmodel = findViewById(R.id.model);
+    Vehicle_model = findViewById(R.id.vehiclemodel);
     plate = findViewById(R.id.plateno);
     Numbers = findViewById(R.id.numbers);
 
@@ -86,13 +87,13 @@ public class RegistrationPage extends AppCompatActivity {
                  tester_bugs.setVisibility(View.INVISIBLE);
                  break;
              case 2:
-                 program_projects.setVisibility(View.VISIBLE);
+                 tester_bugs.setVisibility(View.VISIBLE);
                  manager_clients.setVisibility(View.INVISIBLE);
-                 tester_bugs.setVisibility(View.INVISIBLE);
+                 program_projects.setVisibility(View.INVISIBLE);
                  break;
              case 3:
-                 tester_bugs.setVisibility(View.VISIBLE);
-                 program_projects.setVisibility(View.INVISIBLE);
+                 program_projects.setVisibility(View.VISIBLE);
+                 tester_bugs.setVisibility(View.INVISIBLE);
                  manager_clients.setVisibility(View.INVISIBLE);
                  break;
               default:
@@ -131,12 +132,17 @@ public class RegistrationPage extends AppCompatActivity {
         }
     });
 
-    Reg_btn.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
+     Reg_btn.setOnClickListener(new View.OnClickListener() {
 
-        }
-    });
+         E_Vehicle E_v = new E_Vehicle(Vehicle_model.getText().toString(), plate.getText().toString(),Svehcolor.getSelectedItem().toString());
+         employee e;
+
+         @Override
+         public void onClick(View view) {
+
+             
+         }
+     });
 
 
 

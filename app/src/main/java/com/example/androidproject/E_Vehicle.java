@@ -2,16 +2,16 @@ package com.example.androidproject;
 
 public class E_Vehicle {
 
-    private String make, plate, color;
+    private String model, plate, color;
 
-    public E_Vehicle(String make, String plate, String color) {
-        this.make = make;
+    public E_Vehicle(String model, String plate, String color) {
+        this.model = model;
         this.plate = plate;
         this.color = color;
     }
 
-    public String getMake() {
-        return make;
+    public String getModel() {
+        return model;
     }
 
     public String getPlate() {
