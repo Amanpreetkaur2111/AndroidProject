@@ -15,17 +15,17 @@ public class programmer extends employee {
         NbProjects = nbProjects;
     }
 
-//    @Override
-//    public double AnnualIncome() {
-//        return super.AnnualIncome() + (NbProjects * GAIN_FACTOR_CLIENT);
-//    }
-//
-//    @Override
-//    public String Alldata() {
-//        String Data = super.Alldata() + ",a Tester \n" + "Age = " + super.getEage() + "\n";
-//        Data += "Employee has a " + super.getVehicle() + "\n" + "Occupation rate:" + super.getErate()
-//                + "%n" + "Annual income = " + "$" +super.AnnualIncome() + "He/She has brought" +
-//                NbProjects + "new clients";
-//        return Data;
-//    }
+    @Override
+    public double AnnualIncome() {
+        return super.AnnualIncome() + (NbProjects * GAIN_FACTOR_CLIENT);
+    }
+
+    @Override
+    public String Alldata() {
+        String Data = super.Alldata() + ",a Tester \n" + "Age = " + super.getEage() + "\n";
+        Data += "Employee has a " + super.getVehicle() + "\n" + "Occupation rate:" + super.getErate()
+                + "%n" + "Annual income = " + "$" +super.AnnualIncome() + "He/She has brought" +
+                NbProjects + "new clients";
+        return Data;
+    }
 }
