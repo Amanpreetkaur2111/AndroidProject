@@ -15,9 +15,9 @@ public class RegistrationPage extends AppCompatActivity {
 
 
 
-    TextView Fname,Lname,Byear,Msalary,Orate,Eid,Etype,Veh,Vmodel,Pnumber,Vcolor,Car_type,Side_Car;
+    TextView Fname,Lname,Byear,Msalary,Orate,Eid,Etype,Veh,Vmodel,Pnumber,Vcolor,Car_type,Side_Car,tester_bugs,program_projects,manager_clients;
 
-    EditText editfname,editlname,byear,msalary,orate,eid,carmodel,plate,Ecar_type;
+    EditText editfname,editlname,byear,msalary,orate,eid,carmodel,plate,Ecar_type,Numbers;
 
     Spinner Semptype,Svehcolor;
 
@@ -42,6 +42,9 @@ public class RegistrationPage extends AppCompatActivity {
     Vcolor = findViewById(R.id.VehicleColor);
     Car_type = findViewById(R.id.Cartype);
     Side_Car = findViewById(R.id.SideCar);
+    tester_bugs = findViewById(R.id.T_bugs);
+    program_projects = findViewById(R.id.P_projects);
+    manager_clients = findViewById(R.id.M_clients);
 
 
     // Edit Text
@@ -54,6 +57,7 @@ public class RegistrationPage extends AppCompatActivity {
     eid = findViewById(R.id.employeeid);
     carmodel = findViewById(R.id.model);
     plate = findViewById(R.id.plateno);
+    Numbers = findViewById(R.id.numbers);
 
     // RadioGroup
     rgroup = findViewById(R.id.RGroup);
@@ -68,7 +72,14 @@ public class RegistrationPage extends AppCompatActivity {
     Semptype.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+         Numbers.setVisibility(View.VISIBLE);
 
+         switch(i){
+             case 1:
+                 manager_clients.setVisibility(View.VISIBLE);
+                 program_projects.setVisibility(View.VISIBLE);
+                 tester_bugs.setVisibility(View.VISIBLE);
+         }
         }
 
         @Override

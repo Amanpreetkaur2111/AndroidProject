@@ -81,7 +81,37 @@
         android:layout_marginTop="20dp"
         android:layout_below="@+id/employeeId"/>
 
+    <TextView
+        android:id="@+id/T_bugs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#bugs"
+        android:textSize="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/EmployeeType"
+        android:visibility="gone"/>
 
+    <TextView
+        android:id="@+id/P_projects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#projects"
+        android:textSize="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/EmployeeType"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/M_clients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#Clients"
+        android:textSize="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/EmployeeType"
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/Vehicle"
@@ -220,6 +250,18 @@
         android:layout_marginTop="20dp"
         android:entries="@array/Emp_type"/>
 
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numbers"
+        android:hint="numbers"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="80dp"
+        android:visibility="gone"
+        android:layout_below="@id/Semployee_type"
+        android:layout_toRightOf="@id/EmployeeType"/>
 
     <RadioGroup
         android:id="@+id/RGroup"
