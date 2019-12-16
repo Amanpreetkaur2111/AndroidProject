@@ -65,7 +65,7 @@ public class employee {
 
 
 //  Arraylist of all Employees
-    public static ArrayList<employee> arrayList = new ArrayList<>();
+    public static ArrayList<employee> Emp_arrayList = new ArrayList<>();
 
 
 //    Functions
