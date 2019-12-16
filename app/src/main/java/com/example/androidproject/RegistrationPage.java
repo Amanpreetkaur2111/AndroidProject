@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -23,6 +24,8 @@ public class RegistrationPage extends AppCompatActivity {
 
     RadioGroup rgroup,rsidegroup;
 
+    Button Reg_btn;
+    String value;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,7 @@ public class RegistrationPage extends AppCompatActivity {
     manager_clients = findViewById(R.id.M_clients);
 
 
+
     // Edit Text
     editfname = findViewById(R.id.editFirstName);
     editlname = findViewById(R.id.editLastName);
@@ -67,7 +71,8 @@ public class RegistrationPage extends AppCompatActivity {
     Semptype = findViewById(R.id.Semployee_type);
     Svehcolor = findViewById(R.id.SVehicle_color);
 
-
+   // Button
+        Reg_btn = findViewById(R.id.btn);
 
     Semptype.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
         @Override
@@ -77,16 +82,62 @@ public class RegistrationPage extends AppCompatActivity {
          switch(i){
              case 1:
                  manager_clients.setVisibility(View.VISIBLE);
+                 program_projects.setVisibility(View.INVISIBLE);
+                 tester_bugs.setVisibility(View.INVISIBLE);
+                 break;
+             case 2:
                  program_projects.setVisibility(View.VISIBLE);
+                 manager_clients.setVisibility(View.INVISIBLE);
+                 tester_bugs.setVisibility(View.INVISIBLE);
+                 break;
+             case 3:
                  tester_bugs.setVisibility(View.VISIBLE);
+                 program_projects.setVisibility(View.INVISIBLE);
+                 manager_clients.setVisibility(View.INVISIBLE);
+                 break;
+              default:
+                  Numbers.setVisibility(View.GONE);
+                  manager_clients.setVisibility(View.GONE);
+                  tester_bugs.setVisibility(View.GONE);
+                  program_projects.setVisibility(View.GONE);
          }
+
+            rgroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                    RadioButton r_Button = (RadioButton)findViewById(i);
+                    value = r_Button.getText().toString();
+
+                    if(i == R.id.Rb1){
+                        Car_type.setVisibility(View.VISIBLE);
+                        Ecar_type.setVisibility(View.VISIBLE);
+                        Side_Car.setVisibility(View.INVISIBLE);
+                        rsidegroup.setVisibility(View.INVISIBLE);
+                    }
+                    else
+                    {
+                        Car_type.setVisibility(View.INVISIBLE);
+                        Ecar_type.setVisibility(View.INVISIBLE);
+                        Side_Car.setVisibility(View.VISIBLE);
+                        rsidegroup.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
         }
 
         @Override
         public void onNothingSelected(AdapterView<?> adapterView) {
+        }
+    });
+
+    Reg_btn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
 
         }
     });
+
 
 
     }

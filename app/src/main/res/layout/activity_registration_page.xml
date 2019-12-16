@@ -114,6 +114,17 @@
         android:visibility="gone"/>
 
     <TextView
+        android:id="@+id/SideCar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Side Car"
+        android:visibility="gone"
+        android:textSize="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/Vehicle"/>
+
+    <TextView
         android:id="@+id/Vehicle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -378,16 +389,7 @@
         android:layout_below="@+id/SVehicle_color"
         android:layout_marginTop="20dp"/>
 
-    <TextView
-        android:id="@+id/SideCar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Side Car"
-        android:visibility="gone"
-        android:textSize="18dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/Vehicle"/>
+
 
 
 
