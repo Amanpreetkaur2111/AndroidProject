@@ -59,7 +59,7 @@
         android:text="Occupation Rate"
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/MonthlySalary"/>
 
     <TextView
@@ -69,7 +69,7 @@
         android:text="Employee ID"
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/OccupationRate"/>
     <TextView
         android:id="@+id/EmployeeType"
@@ -78,7 +78,7 @@
         android:text="Employee Type"
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/employeeId"/>
 
     <TextView
@@ -88,7 +88,7 @@
         android:text="#bugs"
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/EmployeeType"
         android:visibility="gone"/>
 
@@ -99,7 +99,7 @@
         android:text="#projects"
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/EmployeeType"
         android:visibility="gone"/>
     <TextView
@@ -109,7 +109,7 @@
         android:text="#Clients"
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/EmployeeType"
         android:visibility="gone"/>
 
@@ -121,7 +121,7 @@
         android:visibility="gone"
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/Vehicle"/>
 
     <TextView
@@ -131,7 +131,7 @@
         android:text="Vehicle"
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/EmployeeType"/>
     <TextView
         android:id="@+id/Cartype"
@@ -140,7 +140,7 @@
         android:text="Car Type"
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/Vehicle"/>
 
 
@@ -152,7 +152,7 @@
         android:text="Vehicle Model"
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/Cartype"/>
     <TextView
         android:id="@+id/PlateNumber"
@@ -161,7 +161,7 @@
         android:text="Plate Number"
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/VehicleModel"/>
     <TextView
         android:id="@+id/VehicleColor"
@@ -170,7 +170,7 @@
         android:text="Vehicle Color"
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/PlateNumber"/>
 
     <EditText
@@ -179,7 +179,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/RegistrationPage"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:layout_toRightOf="@+id/firstname"
         android:background="#ddd"
@@ -192,7 +192,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/editFirstName"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:layout_toRightOf="@+id/firstname"
         android:background="#ddd"
@@ -205,7 +205,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/editLastName"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:layout_toRightOf="@+id/BirthYear"
         android:background="#ddd"
@@ -218,7 +218,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/birthyear"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:layout_toRightOf="@+id/BirthYear"
         android:background="#ddd"
@@ -230,7 +230,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:layout_toRightOf="@+id/MonthlySalary"
         android:layout_below="@+id/monthlysalary"
@@ -244,7 +244,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/employeeId"
         android:layout_below="@+id/OccupationRate"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="80dp"
         android:textSize="18dp"
@@ -258,7 +258,7 @@
         android:layout_toRightOf="@id/EmployeeType"
         android:layout_below="@id/employeeid"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:entries="@array/Emp_type"/>
 
 
@@ -268,7 +268,7 @@
         android:id="@+id/numbers"
         android:hint="numbers"
         android:inputType="numberDecimal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="80dp"
         android:visibility="gone"
         android:layout_below="@id/Semployee_type"
@@ -281,7 +281,7 @@
         android:orientation="horizontal"
         android:layout_below="@id/Semployee_type"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/Vehicle">
 
         <RadioButton
@@ -326,7 +326,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="70dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/RsideGroup"
         android:layout_marginRight="20dp"
         android:layout_toRightOf="@+id/VehicleModel"
@@ -338,7 +338,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="180dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/RGroup"
         android:layout_marginRight="20dp"
         android:layout_toRightOf="@+id/SideCar"
@@ -351,7 +351,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/EditCarType"
         android:layout_marginRight="20dp"
         android:layout_toRightOf="@+id/VehicleModel"
@@ -365,7 +365,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="70dp"
         android:layout_below="@+id/VehicleModel"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:layout_toRightOf="@+id/PlateNumber"
         android:background="#ddd"
@@ -378,7 +378,7 @@
         android:entries="@array/Veh_color"
         android:layout_toRightOf="@+id/VehicleColor"
         android:layout_below="@+id/plateno"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="60dp"/>
 
     <Button
@@ -387,7 +387,7 @@
         android:text="Register"
         android:id="@+id/btn"
         android:layout_below="@+id/SVehicle_color"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="10dp"/>
 
 
 
