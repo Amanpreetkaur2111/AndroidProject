@@ -16,7 +16,7 @@ public class Detail_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_detail_);
 
         TextView txt_view = findViewById(R.id.txtview1);
-        ArrayList<String> arrayList new ArrayList<>();
+        ArrayList<String> arrayList = new ArrayList<>();
 
         Intent intent = getIntent();
         int i = intent.getExtras().getInt("ID");
