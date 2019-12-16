@@ -10,4 +10,19 @@ public class E_Vehicle {
         this.color = color;
     }
 
+    public String getMake() {
+        return make;
+    }
+
+    public String getPlate() {
+        return plate;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String data(){
+        return ""  ;
+    }
 }
