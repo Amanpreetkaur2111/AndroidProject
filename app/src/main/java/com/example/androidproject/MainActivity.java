@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         add = findViewById(R.id.button);
         listView = findViewById(R.id.listView);
         searchView = findViewById(R.id.search_bar);
