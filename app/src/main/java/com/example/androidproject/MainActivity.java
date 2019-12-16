@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -38,12 +39,17 @@ public class MainActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
 
 
-        listView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+      listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+          @Override
+          public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+              Intent intent = new Intent(MainActivity.this, Detail_Activity.class);
+              intent.putExtra("ID",i);
+              startActivity(intent);
+          }
+      });
 
-            }
-        });
+
+
 
 
         add.setOnClickListener(new View.OnClickListener() {
