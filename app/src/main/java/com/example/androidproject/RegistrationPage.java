@@ -162,9 +162,19 @@ public class RegistrationPage extends AppCompatActivity {
                                  ExistSideCar = true;
                                  System.out.println("SideCar yes");
                                  Log.i("YSideCar","SideCarYes");
+                                 break;
+                             case R.id.Rbn2:
+                                 ExistSideCar = true;
+                                 System.out.println("SideCar no");
+                                 Log.i("NSideCar","SideCarNo");
+                                 break;
+                             default:
+                                    break;
                          }
-
-
+                         E_v = new motorBike(Vehicle_model.getText().toString(), plate.getText().toString(), Svehcolor.getSelectedItem().toString(), ExistSideCar);
+                         break;
+                  default:
+                      break;
                  }
              }
          }

@@ -3,7 +3,7 @@ package com.example.androidproject;
 public class programmer extends employee {
 
     private int NbProjects;
-    private final int GAIN_FACTOR_CLIENT = 10;
+    private final int GAIN_FACTOR_PROJECTS = 200;
 
     public programmer(String ename, int eid, int emonthly_salary, int ebirth_year, double erate, E_Vehicle vehicle, int nbProjects) {
         super(ename, eid, emonthly_salary, ebirth_year, erate, vehicle);
@@ -17,7 +17,7 @@ public class programmer extends employee {
 
     @Override
     public double AnnualIncome() {
-        return super.AnnualIncome() + (NbProjects * GAIN_FACTOR_CLIENT);
+        return super.AnnualIncome() + (NbProjects * GAIN_FACTOR_PROJECTS);
     }
 
     @Override

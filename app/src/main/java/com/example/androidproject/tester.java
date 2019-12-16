@@ -3,7 +3,7 @@ package com.example.androidproject;
 public class tester extends employee {
 
     private int NbBugs;
-    private final int GAIN_FACTOR_ERROR = 200;
+    private final int GAIN_FACTOR_ERROR = 10;
 
     public tester(String ename, int eid, int emonthly_salary, int ebirth_year, double erate, E_Vehicle vehicle, int nbBugs) {
         super(ename, eid, emonthly_salary, ebirth_year, erate, vehicle);
