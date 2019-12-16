@@ -18,11 +18,6 @@ public class motorBike extends E_Vehicle {
         }
     }
 
-    public String data(){
-        String data = super.data() + "motorCycle \n" + "Model" + super.getMake() +"\n"
-                       + "Plate = " + super.getPlate() + "Color = " + super.getColor() + "\n";
-        data += "_" + isSideCar();
-        return data;
-    }
+   
 
 }
