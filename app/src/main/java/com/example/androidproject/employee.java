@@ -10,13 +10,13 @@ public class employee {
     private E_Vehicle vehicle;
 
 
-    public employee(String ename, int eage, int eid, int emonthly_salary, int ebirth_year, double erate, E_Vehicle vehicle) {
+    public employee(String ename, int eid, int emonthly_salary, int ebirth_year, double erate, E_Vehicle vehicle) {
         Ename = ename;
-        Eage = eage;
         Eid = eid;
         Emonthly_salary = emonthly_salary;
         Ebirth_year = ebirth_year;
         Erate = erate;
+        this.Eage = getEage();
         this.vehicle = vehicle;
 
 
@@ -38,6 +38,7 @@ public class employee {
         Emonthly_salary = emonthly_salary;
         Ebirth_year = ebirth_year;
         this.vehicle = vehicle;
+        this.Eage = getEage();
     }
 
 
