@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         add = findViewById(R.id.button);
         listView = findViewById(R.id.listView);
-//        searchView = findViewById(R.id.search_view);
+        searchView = findViewById(R.id.search_bar);
 
         ArrayList<String> arrayList = new ArrayList<>();
 
@@ -48,7 +48,18 @@ public class MainActivity extends AppCompatActivity {
           }
       });
 
+       searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+           @Override
+           public boolean onQueryTextSubmit(String s) {
+               return false;
+           }
 
+           @Override
+           public boolean onQueryTextChange(String s) {
+               adapter.getFilter().filter(s);
+               return false;
+           }
+       });
 
 
 
