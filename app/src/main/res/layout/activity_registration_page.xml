@@ -132,7 +132,7 @@
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/EmployeeType"/>
+        android:layout_below="@id/T_bugs"/>
     <TextView
         android:id="@+id/Cartype"
         android:layout_width="wrap_content"
@@ -262,24 +262,44 @@
         android:entries="@array/Emp_type"/>
 
 
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/numbers"
+        android:id="@+id/T_numbers"
         android:hint="numbers"
         android:inputType="numberDecimal"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="200dp"
         android:visibility="gone"
-        android:layout_below="@id/Semployee_type"
-        android:layout_toRightOf="@id/EmployeeType"/>
+        android:layout_below="@id/Semployee_type" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/P_numbers"
+        android:hint="numbers"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="200dp"
+        android:visibility="gone"
+        android:layout_below="@id/Semployee_type" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/M_numbers"
+        android:hint="numbers"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="200dp"
+        android:visibility="gone"
+        android:layout_below="@id/Semployee_type" />
 
     <RadioGroup
         android:id="@+id/RGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@id/Semployee_type"
+        android:layout_below="@id/numbers"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/Vehicle">

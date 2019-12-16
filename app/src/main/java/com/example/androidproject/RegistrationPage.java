@@ -2,6 +2,7 @@ package com.example.androidproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class RegistrationPage extends AppCompatActivity {
 
@@ -19,7 +21,7 @@ public class RegistrationPage extends AppCompatActivity {
 
     TextView Fname,Lname,Byear,Msalary,Orate,Eid,Etype,Veh,Vmodel,Pnumber,Vcolor,Car_type,Side_Car,tester_bugs,program_projects,manager_clients;
 
-    EditText editfname,editlname,byear,msalary,orate,eid,carmodel,Vehicle_model,plate,Ecar_type,Numbers;
+    EditText editfname,editlname,byear,msalary,orate,eid,carmodel,Vehicle_model,plate,Ecar_type,EditT_numbers,EditP_numbers,EditM_numbers;
 
     Spinner Semptype,Svehcolor;
 
@@ -84,18 +86,23 @@ public class RegistrationPage extends AppCompatActivity {
          switch(i){
              case 1:
                  manager_clients.setVisibility(View.VISIBLE);
-                 program_projects.setVisibility(View.INVISIBLE);
-                 tester_bugs.setVisibility(View.INVISIBLE);
+                 program_projects.setVisibility(View.GONE);
+                 tester_bugs.setVisibility(View.GONE);
+                 Numbers.setVisibility(View.VISIBLE);
+
+
                  break;
              case 2:
                  tester_bugs.setVisibility(View.VISIBLE);
-                 manager_clients.setVisibility(View.INVISIBLE);
-                 program_projects.setVisibility(View.INVISIBLE);
+                 manager_clients.setVisibility(View.GONE);
+                 program_projects.setVisibility(View.GONE);
+                 Numbers.setVisibility(View.VISIBLE);
                  break;
              case 3:
                  program_projects.setVisibility(View.VISIBLE);
-                 tester_bugs.setVisibility(View.INVISIBLE);
-                 manager_clients.setVisibility(View.INVISIBLE);
+                 tester_bugs.setVisibility(View.GONE);
+                 manager_clients.setVisibility(View.GONE);
+                 Numbers.setVisibility(View.VISIBLE);
                  break;
               default:
                   Numbers.setVisibility(View.GONE);
@@ -114,13 +121,13 @@ public class RegistrationPage extends AppCompatActivity {
                     if(i == R.id.Rb1){
                         Car_type.setVisibility(View.VISIBLE);
                         Ecar_type.setVisibility(View.VISIBLE);
-                        Side_Car.setVisibility(View.INVISIBLE);
-                        rsidegroup.setVisibility(View.INVISIBLE);
+                        Side_Car.setVisibility(View.GONE);
+                        rsidegroup.setVisibility(View.GONE);
                     }
                     else
                     {
-                        Car_type.setVisibility(View.INVISIBLE);
-                        Ecar_type.setVisibility(View.INVISIBLE);
+                        Car_type.setVisibility(View.GONE);
+                        Ecar_type.setVisibility(View.GONE);
                         Side_Car.setVisibility(View.VISIBLE);
                         rsidegroup.setVisibility(View.VISIBLE);
                     }
@@ -136,7 +143,7 @@ public class RegistrationPage extends AppCompatActivity {
      Reg_btn.setOnClickListener(new View.OnClickListener() {
 
          E_Vehicle E_v = new E_Vehicle(Vehicle_model.getText().toString(), plate.getText().toString(),Svehcolor.getSelectedItem().toString());
-         employee e;
+         employee emp;
 
          @Override
          public void onClick(View view) {
@@ -176,6 +183,49 @@ public class RegistrationPage extends AppCompatActivity {
                   default:
                       break;
                  }
+
+                 switch (Semptype.getSelectedItem().toString()){
+                     case "Manager":
+                         if(!Orate.getText().toString().equals("")){
+                             emp = new manager(editfname.getText().toString() + "" + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
+                                     Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), Double.parseDouble(orate.getText().toString()),
+                                     E_v, Integer.parseInt(numbers.getText().toString()));}
+                         else {
+                             emp = new manager(editfname.getText().toString() + " " + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
+                                     Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), E_v, Integer.parseInt(numbers.getText().toString()));
+                         }
+                         break;
+                     case "Tester":
+                         if(!Orate.getText().toString().equals("")){
+                             emp = new manager(editfname.getText().toString() + "" + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
+                                     Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), Double.parseDouble(orate.getText().toString()),
+                                     E_v, Integer.parseInt(numbers.getText().toString()));}
+                         else {
+                             emp = new manager(editfname.getText().toString() + " " + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
+                                     Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), E_v, Integer.parseInt(numbers.getText().toString()));
+                         }
+                         break;
+                     case "Programmer":
+                     if(!Orate.getText().toString().equals("")){
+                         emp = new manager(editfname.getText().toString() + "" + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
+                                 Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), Double.parseDouble(orate.getText().toString()),
+                                 E_v, Integer.parseInt(numbers.getText().toString()));}
+                     else {
+                         emp = new manager(editfname.getText().toString() + " " + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
+                                 Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), E_v, Integer.parseInt(numbers.getText().toString()));
+                     }
+                     break;
+                 }
+
+                 employee.Emp_arrayList.add(emp);
+
+                 Toast.makeText(RegistrationPage.this, "Successfully registered", Toast.LENGTH_SHORT).show();
+                 Intent intent = new Intent(RegistrationPage.this,MainActivity.class);
+                 startActivity(intent);
+             }
+             else
+             {
+                 Toast.makeText(RegistrationPage.this,"All fields are required ", Toast.LENGTH_LONG).show();
              }
          }
      });
