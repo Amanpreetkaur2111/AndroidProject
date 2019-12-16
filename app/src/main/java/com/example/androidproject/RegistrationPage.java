@@ -205,21 +205,21 @@ public class RegistrationPage extends AppCompatActivity {
                          break;
                      case "Tester":
                          if(!Orate.getText().toString().equals("")){
-                             emp = new manager(editfname.getText().toString() + "" + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
+                             emp = new tester(editfname.getText().toString() + "" + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
                                      Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), Double.parseDouble(orate.getText().toString()),
                                      E_v, Integer.parseInt(Numbers.getText().toString()));}
                          else {
-                             emp = new manager(editfname.getText().toString() + " " + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
+                             emp = new tester(editfname.getText().toString() + " " + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
                                      Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), E_v, Integer.parseInt(Numbers.getText().toString()));
                          }
                          break;
                      case "Programmer":
                      if(!Orate.getText().toString().equals("")){
-                         emp = new manager(editfname.getText().toString() + "" + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
+                         emp = new programmer(editfname.getText().toString() + "" + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
                                  Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), Double.parseDouble(orate.getText().toString()),
                                  E_v, Integer.parseInt(Numbers.getText().toString()));}
                      else {
-                         emp = new manager(editfname.getText().toString() + " " + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
+                         emp = new programmer(editfname.getText().toString() + " " + editlname.getText().toString(), Integer.parseInt(eid.getText().toString()),
                                  Integer.parseInt(byear.getText().toString()), Integer.parseInt(msalary.getText().toString()), E_v, Integer.parseInt(Numbers.getText().toString()));
                      }
                      break;
