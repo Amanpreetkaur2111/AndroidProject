@@ -3,6 +3,7 @@ package com.example.androidproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -140,7 +141,32 @@ public class RegistrationPage extends AppCompatActivity {
          @Override
          public void onClick(View view) {
 
-             
+             if(!editfname.getText().toString().isEmpty() & !editlname.getText().toString().isEmpty() & byear.getText().toString().isEmpty() & !
+                msalary.getText().toString().isEmpty() & orate.getText().toString().isEmpty() & eid.getText().toString().isEmpty() &
+                     !Semptype.getSelectedItem().toString().isEmpty() & !Numbers.getText().toString().isEmpty() & !carmodel.getText().toString().isEmpty() &
+                     !Vehicle_model.getText().toString().isEmpty() & !plate.getText().toString().isEmpty() & !Svehcolor.getSelectedItem().toString().isEmpty()){
+
+                 int id = rgroup.getCheckedRadioButtonId();
+
+                 switch (id){
+
+                     case R.id.Rb1:
+                         E_v = new car(Vehicle_model.getText().toString(), plate.getText().toString(), Svehcolor.getSelectedItem().toString(), carmodel.getText().toString());
+                         break;
+
+                     case R.id.Rb2:
+                         Boolean ExistSideCar = false;
+
+                         switch (rsidegroup.getCheckedRadioButtonId()){
+                             case R.id.Rby1:
+                                 ExistSideCar = true;
+                                 System.out.println("SideCar yes");
+                                 Log.i("YSideCar","SideCarYes");
+                         }
+
+
+                 }
+             }
          }
      });
 
